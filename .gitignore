@@ -10,9 +10,12 @@
 .storage
 .cloud
 .google.token
+.vscode
 
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
 ip_bans.yaml
 secrets.yaml
 known_devices.yaml
+frigate.yml
+network.md
 .gitignore
