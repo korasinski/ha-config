@@ -1,0 +1,76 @@
+##########################################################################
+#                                                                        #
+#                            * CONFIGURAION *                            #
+#                                                                        # 
+##########################################################################
+
+default_config:
+
+http:
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+
+homeassistant:
+  customize: !include customize.yaml
+
+logger:
+  default: warning
+
+# Configs
+automation: !include_dir_merge_list configs/automations
+binary_sensor: !include_dir_merge_list configs/binary_sensors
+camera: !include_dir_merge_list configs/cameras
+climate: !include_dir_merge_list configs/climates
+fan: !include_dir_merge_list configs/fans
+group: !include_dir_merge_list configs/groups
+input_boolean: !include configs/input_boolean.yaml
+media_player: !include_dir_merge_list configs/media_players
+scene: !include_dir_merge_list configs/scenes
+script: !include configs/scripts/scripts.yaml
+sensor: !include_dir_merge_list configs/sensors
+switch: !include_dir_merge_list configs/switches
+vacuum: !include_dir_merge_list configs/vacuum
+rest_command: !include configs/rest_commands.yaml
+
+# Integrations
+localtuya: !include integrations/localtuya.yaml
+spotify: !include integrations/spotify.yaml
+circadian_lighting:
+
+# Lovelace
+frontend:
+  themes: !include_dir_merge_named themes
+lovelace:
+  mode: yaml
+  resources:
+    - url: /local/community/lovelace-card-mod/card-mod.js
+      type: module
+    - url: /local/community/button-card/button-card.js
+      type: module
+    - url: /local/community/mini-graph-card/mini-graph-card-bundle.js
+      type: module
+    - url: /local/community/mini-media-player/mini-media-player-bundle.js
+      type: module
+    - url: /local/community/simple-weather-card/simple-weather-card-bundle.js
+      type: module
+    - url: /local/community/light-popup-card/light-popup-card.js
+      type: module
+    - url: /local/community/secondaryinfo-entity-row/secondaryinfo-entity-row.js
+      type: module
+    - url: /local/community/lovelace-card-tools/card-tools.js
+      type: module
+    - url: /local/styles.css?v=0.01
+      type: css
+    - url: "https://fonts.googleapis.com/css?family=Roboto"
+      type: css
+
+recorder:
+  exclude:
+    domains:
+      - automation
+      - updater
+      - group
+      - history_graph
+      - media_player
+      - zone
+      - zwave

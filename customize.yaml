@@ -1,0 +1,26 @@
+light.h801_ceiling:
+  friendly_name: Ceiling
+light.h801_corridor:
+  friendly_name: Corridor
+light.h801_kitchen:
+  friendly_name: Kitchen
+light.h801_tv:
+  friendly_name: TV
+light.h801_catlitter:
+  friendly_name: Cat Litter
+light.h801_catfeeder:
+  friendly_name: Cat Feeder
+sensor.leclerc_on:
+  icon: mdi:gas-station
+sensor.leclerc_pb95:
+  icon: mdi:gas-station
+sensor.leclerc_pb98:
+  icon: mdi:gas-station
+sensor.leclerc_lpg:
+  icon: mdi:gas-station
+sensor.nbp_eur:
+  icon: mdi:currency-eur
+sensor.nbp_gbp:
+  icon: mdi:currency-gbp
+sensor.nbp_usd:
+  icon: mdi:currency-usd
