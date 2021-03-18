@@ -1,0 +1,31 @@
+- platform: scrape
+  name: Leclerc ON
+  resource: https://wroclaw.leclerc.pl/
+  select: ".on"
+  value_template: '{{ value.replace(",", ".") }}' 
+  unit_of_measurement: "zł"
+  scan_interval: 21600
+
+- platform: scrape
+  name: Leclerc PB95
+  resource: https://wroclaw.leclerc.pl/
+  select: ".pb95"
+  value_template: '{{ value.replace(",", ".") }}' 
+  unit_of_measurement: "zł"
+  scan_interval: 21600
+
+- platform: scrape
+  name: Leclerc PB98
+  resource: https://wroclaw.leclerc.pl/
+  select: ".pb98"
+  value_template: '{{ value.replace(",", ".") }}' 
+  unit_of_measurement: "zł"
+  scan_interval: 21600
+
+- platform: scrape
+  name: Leclerc LPG
+  resource: https://wroclaw.leclerc.pl/
+  select: ".lpg"
+  value_template: '{{ value.replace(",", ".") }}' 
+  unit_of_measurement: "zł"
+  scan_interval: 21600

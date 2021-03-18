@@ -1,0 +1,22 @@
+type: horizontal-stack
+cards:
+  - type: custom:button-card
+    entity: switch.bedroom_1
+    template: switch_top_light
+    hold_action:
+      action: more-info
+      entity: switch.bedroom_1
+  - type: custom:button-card
+    entity: switch.bedroom_2
+    template: switch_top_light
+    hold_action:
+      action: more-info
+      entity: switch.bedroom_2
+  - type: custom:button-card
+    entity: switch.kitchen_2
+    template: switch_top_single
+    hold_action:
+      action: more-info
+      entity: switch.kitchen_2
+
+

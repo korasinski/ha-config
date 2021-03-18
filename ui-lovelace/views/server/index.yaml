@@ -1,0 +1,14 @@
+path: server
+title: Server
+panel: false
+icon: mdi:server
+cards:
+  - type: vertical-stack
+    cards:
+      - !include title.yaml
+      - !include subtitle.yaml
+      - !include cpu_temp.yaml
+      - !include cpu_usage.yaml
+      - !include memory.yaml
+      - !include disk.yaml
+      - !include internet.yaml

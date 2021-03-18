@@ -1,0 +1,74 @@
+#Entrance
+- host: !secret tuya_enrance_host
+  device_id: !secret tuya_enrance_device_id
+  local_key: !secret tuya_enrance_local_key
+  friendly_name: Entrance
+  protocol_version: "3.3"
+  entities:
+    - platform: switch
+      friendly_name: Entrance
+      id: 1
+
+# Bedroom
+- host: !secret tuya_bedroom_host
+  device_id: !secret tuya_bedroom_device_id
+  local_key: !secret tuya_bedroom_local_key
+  friendly_name: Bedroom
+  protocol_version: "3.3"
+  entities:
+    - platform: switch
+      friendly_name: Bedroom Top light
+      id: 1
+    - platform: switch
+      friendly_name: Bedroom Blank
+      id: 2
+
+#Living room
+- host: !secret tuya_livingroom_host
+  device_id: !secret tuya_livingroom_device_id
+  local_key: !secret tuya_livingroom_local_key
+  friendly_name: Living room
+  protocol_version: "3.3"
+  entities:
+    - platform: switch
+      friendly_name: Living room Top 
+      id: 1
+    - platform: switch
+      friendly_name: Living room Blank
+      id: 2
+
+#Corridor
+- host: !secret tuya_corridor_host
+  device_id: !secret tuya_corridor_device_id
+  local_key: !secret tuya_corridor_local_key
+  friendly_name: Corridor
+  protocol_version: "3.3"
+  entities:
+    - platform: switch
+      friendly_name: Corridor
+      id: 1
+
+#Ceiling
+- host: !secret tuya_ceiling_host
+  device_id: !secret tuya_ceiling_device_id
+  local_key: !secret tuya_ceiling_local_key
+  friendly_name: Ceiling
+  protocol_version: "3.3"
+  entities:
+    - platform: switch
+      friendly_name: Ceiling
+      id: 1
+
+#Kitchen
+- host: !secret tuya_kitchen_host
+  device_id: !secret tuya_kitchen_device_id
+  local_key: !secret tuya_kitchen_local_key
+  friendly_name: Kitchen
+  protocol_version: "3.3"
+  entities:
+    - platform: switch
+      friendly_name: Kitchen Top 
+      id: 1
+    - platform: switch
+      friendly_name: Kitchen Blank
+      id: 2

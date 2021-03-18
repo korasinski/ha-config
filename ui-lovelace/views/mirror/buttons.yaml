@@ -1,0 +1,20 @@
+type: horizontal-stack
+cards:
+  - type: custom:button-card
+    entity: switch.smart_mirror
+    template: switch_smart_mirror
+    hold_action:
+      action: more-info
+      entity: switch.smart_mirror
+  - type: custom:button-card
+    entity: switch.smart_mirror_display
+    template: switch_display
+    hold_action:
+      action: more-info
+      entity: switch.smart_mirror
+  - type: custom:button-card
+    entity: switch.smart_mirror_pm2
+    template: switch_pm2
+    hold_action:
+      action: more-info
+      entity: switch.smart_mirror

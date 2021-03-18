@@ -1,0 +1,11 @@
+path: lights
+title: Lights
+panel: false
+icon: mdi:lightbulb
+cards:
+  - type: vertical-stack
+    cards:
+      - !include title.yaml
+      - !include subtitle.yaml
+      - !include 1_row.yaml
+      - !include 2_row.yaml

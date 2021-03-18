@@ -1,0 +1,21 @@
+type: 'custom:mini-graph-card'
+name: Actual voltage and current
+entities:
+  - entity: sensor.energy_phase123_voltage
+    name: Voltage
+    index: 0
+    show_state: true
+  - entity: sensor.energy_phase123_current
+    name: Current
+    index: 1
+    show_state: true
+    y_axis: secondary
+points_per_hour: 60
+hours_to_show: 2
+line_width: 2
+show:
+  fill: fade
+  extrema: true
+  legend: true
+  labels: true
+animate: true

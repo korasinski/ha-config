@@ -1,0 +1,7 @@
+- platform: gree
+  name: Gree Lomo
+  host: !secret gree_host
+  port: 7000
+  mac: !secret gree_mac
+  target_temp_step: 1
+  temp_sensor: sensor.air_purifier_2h_temperature

@@ -1,0 +1,10 @@
+- id: 'litter_light'
+  alias: Cat litter - light
+  description: ''
+  use_blueprint:
+    path: homeassistant/motion_light.yaml
+    input:
+      no_motion_wait: '120'
+      motion_entity: binary_sensor.h801_catlitter_pir
+      light_target:
+        entity_id: light.h801_catlitter 

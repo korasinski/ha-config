@@ -1,0 +1,22 @@
+type: horizontal-stack
+cards:
+  - type: custom:button-card
+    entity: switch.living_room_1
+    template: switch_top_light
+    hold_action:
+      action: more-info
+      entity: switch.living_room_1
+  - type: custom:button-card
+    entity: switch.living_room_2
+    template: switch_top_light
+    hold_action:
+      action: more-info
+      entity: switch.living_room_2
+  - type: custom:button-card
+    entity: switch.corridor_1
+    template: switch_top_single
+    hold_action:
+      action: more-info
+      entity: switch.corridor_1
+
+

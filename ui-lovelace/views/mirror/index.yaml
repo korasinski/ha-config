@@ -1,0 +1,13 @@
+path: mirror
+title: Smart Mirror
+panel: false
+icon: mdi:mirror
+cards:
+  - type: vertical-stack
+    cards:
+      - !include title.yaml
+      - !include subtitle.yaml
+      - !include buttons.yaml
+      - !include cpu_temp.yaml
+      - !include cpu_usage.yaml
+      - !include disk.yaml

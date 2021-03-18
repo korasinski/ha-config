@@ -1,0 +1,25 @@
+type: markdown
+style: >
+  ha-card {
+    box-shadow: none;
+    height: 100%;
+    background: none;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+    text-align: left;
+    position: static;
+    margin-top: -25px;
+    margin-bottom: 0px;
+    margin-left: -10px;
+  }
+content: >
+
+  {% if state_attr('climate.bathroom_trv', 'position') == 0 and state_attr('climate.bedroom_trv', 'position') == 0 -%}
+  Heating is currently turned off.
+  {% else -%}
+  Heating is currently turned on.
+  {% endif %}
+  
+  Average temperature at home is {{ ((state_attr('climate.bathroom_trv', 'current_temperature') + state_attr('climate.gree_lomo', 'current_temperature') + state_attr('climate.bedroom_trv', 'current_temperature')) / 3) | round(1) }} °C.

@@ -1,0 +1,10 @@
+- id: 'corridor_pir'
+  alias: Light - corridor
+  description: ''
+  use_blueprint:
+    path: homeassistant/motion_light_after_sunset.yaml
+    input:
+      no_motion_wait: '60'
+      motion_entity: binary_sensor.h801_corridor_pir
+      light_target:
+        entity_id: light.h801_corridor 

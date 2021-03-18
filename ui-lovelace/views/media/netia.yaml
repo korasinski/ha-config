@@ -1,0 +1,90 @@
+type: custom:mini-media-player
+entity: media_player.netia_player
+icon: mdi:television-box
+artwork: cover
+volume_stateless: true
+info: scroll
+source: icon
+hide:
+  play_pause: true
+  power_state: false
+shortcuts:
+  columns: 3
+  buttons:
+    - name: MENU
+      type: service
+      id: media_player.play_media
+      data:
+        entity_id: media_player.netia_player
+        media_content_id: "menu"
+        media_content_type: channel
+    - icon: mdi:arrow-up-box
+      type: service
+      id: media_player.play_media
+      data:
+        entity_id: media_player.netia_player
+        media_content_id: "up"
+        media_content_type: channel
+    - name: GUIDE
+      type: service
+      id: media_player.play_media
+      data:
+        entity_id: media_player.netia_player
+        media_content_id: "guide"
+        media_content_type: channel
+    - icon: mdi:arrow-left-box
+      type: service
+      id: media_player.play_media
+      data:
+        entity_id: media_player.netia_player
+        media_content_id: "left"
+        media_content_type: channel
+    - name: OK
+      type: service
+      id: media_player.play_media
+      data:
+        entity_id: media_player.netia_player
+        media_content_id: "ok"
+        media_content_type: channel
+    - icon: mdi:arrow-right-box
+      type: service
+      id: media_player.play_media
+      data:
+        entity_id: media_player.netia_player
+        media_content_id: "right"
+        media_content_type: channel
+    - icon: mdi:undo
+      type: service
+      id: media_player.play_media
+      data:
+        entity_id: media_player.netia_player
+        media_content_id: "back"
+        media_content_type: channel
+    - icon: mdi:arrow-down-box
+      type: service
+      id: media_player.play_media
+      data:
+        entity_id: media_player.netia_player
+        media_content_id: "down"
+        media_content_type: channel
+    - icon: mdi:resize
+      type: service
+      id: media_player.play_media
+      data:
+        entity_id: media_player.netia_player
+        media_content_id: "fullscreen"
+        media_content_type: channel
+    - name: Television
+      icon: mdi:television-classic
+      type: service
+      id: media_player.select_source
+      data:
+        entity_id: media_player.netia_player
+        source: TV
+    - name: YouTube
+      icon: mdi:youtube
+      type: service
+      id: media_player.select_source
+      data:
+        entity_id: media_player.netia_player
+        source: YouTube

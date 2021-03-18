@@ -1,0 +1,31 @@
+- platform: mqtt
+  unique_id: cpu
+  state_topic: "server/proxmox/cpu_temp"
+  device_class: temperature
+  name: CPU Temperature
+  unit_of_measurement: "°C"
+- platform: mqtt
+  unique_id: cpu_core1
+  state_topic: "server/proxmox/cpu_core1_temp"
+  device_class: temperature
+  name: CPU Core 1 Temperature
+  unit_of_measurement: "°C"
+- platform: mqtt
+  unique_id: cpu_core2
+  state_topic: "server/proxmox/cpu_core2_temp"
+  device_class: temperature
+  name: CPU Core 2 Temperature
+  unit_of_measurement: "°C"
+- platform: mqtt
+  unique_id: acpi_1
+  state_topic: "server/proxmox/acpi_temp1"
+  device_class: temperature
+  name: ACPI 1 Temperature
+  unit_of_measurement: "°C"
+  qos: 1
+- platform: mqtt
+  unique_id: acpi_2
+  state_topic: "server/proxmox/acpi_temp2"
+  device_class: temperature
+  name: ACPI 2 Temperature
+  unit_of_measurement: "°C"

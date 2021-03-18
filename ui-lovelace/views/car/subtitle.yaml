@@ -1,0 +1,23 @@
+type: markdown
+style: >
+  ha-card {
+    box-shadow: none;
+    height: 100%;
+    background: none;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+    text-align: left;
+    position: static;
+    margin-top: -25px;
+    margin-bottom: 0px;
+    margin-left: -10px;
+  }
+content: >
+
+  {% if is_state('person.bmw', 'home') %}
+    Cars are parked in the garage, doors are locked.
+  {% else %}
+    Cars are outside the garage.
+  {% endif %}

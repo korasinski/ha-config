@@ -1,0 +1,14 @@
+path: heating
+title: Heating
+panel: false
+icon: mdi:fire
+cards:
+  - type: vertical-stack
+    cards:
+      - !include title.yaml
+      - !include subtitle.yaml
+      - !include living_room.yaml
+      - type: horizontal-stack
+        cards:
+          - !include bedroom.yaml
+          - !include bathroom.yaml

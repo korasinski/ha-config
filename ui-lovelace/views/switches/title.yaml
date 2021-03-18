@@ -1,0 +1,16 @@
+type: markdown
+style: >
+  ha-card {
+    box-shadow: none;
+    height: 100%;
+    background: none;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 3em;
+    line-height: 1em;
+    text-rendering: optimizeLegibility;
+    margin-left: -10px;
+  }
+
+content: |
+  Switches

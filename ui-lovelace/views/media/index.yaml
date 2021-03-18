@@ -1,0 +1,13 @@
+path: media
+title: Media
+panel: false
+icon: mdi:speaker
+cards:
+  - type: vertical-stack
+    cards:
+      - !include title.yaml
+      - !include subtitle.yaml
+      - !include spotify.yaml
+      - !include netia.yaml
+      - !include apple_tv.yaml
+

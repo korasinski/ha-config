@@ -1,0 +1,10 @@
+path: maps
+title: Maps
+panel: false
+icon: mdi:map-marker
+cards:
+  - type: vertical-stack
+    cards:
+      - !include title.yaml
+      - !include subtitle.yaml
+      - !include maps.yaml

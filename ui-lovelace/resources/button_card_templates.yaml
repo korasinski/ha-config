@@ -1,0 +1,95 @@
+base:
+  aspect_ratio: 1/1
+  show_state: true
+  show_icon: false
+  state:
+    - value: "on"
+      styles:
+        card: [background-color: var(--primary-background-color) ]
+        name: [color: var(--primary-text-color)]
+        state: [color: var(--primary-text-color)]
+    - value: "off"
+      styles:
+        card: [background-color: var(--secondary-background-color) ]
+        name: [color: var(--secondary-text-color)]
+        state: [color: var(--secondary-text-color)]
+    - value: "unavailable"
+      styles:
+        card: [background-color: var(--label-badge-red) ]
+        name: [color: var(--secondary-text-color)]
+        state: [color: var(--secondary-text-color)]
+  tap_action:
+    action: toggle
+    haptic: light
+  styles:
+    name: [bottom: 25%, left: 11%, line-height: 1em, position: absolute]
+    state: [bottom: 10%, left: 11%, line-height: 1em, position: absolute]
+    card: [
+        font-family: Roboto,
+        font-weight: 300,
+        font-size: 1em,
+        transition: none,
+      ]
+    custom_fields:
+      circle: [top: 0.5em, right: 0.5em, width: 3em, position: absolute]
+
+light:
+  template: ["base"]
+  hold_acion: more-info
+  color: auto
+  color_type: card
+  custom_fields:
+    circle: !include icons/circle.yaml
+    icon: !include icons/light.yaml
+  styles:
+    custom_fields:
+      icon:
+            - top: 5%
+            - left: 5%
+            - width: 3em
+            - position: absolute
+
+switch:
+  template: ["base"]
+  hold_acion: more-info
+  color: auto
+  color_type: card
+  custom_fields:
+    icon: !include icons/socket.yaml
+  styles:
+    custom_fields:
+      icon:
+            - top: 5%
+            - left: 5%
+            - width: 3em
+            - position: absolute
+
+switch_top_light:
+  template: ["switch"]
+  custom_fields:
+    icon: !include icons/top_light.yaml
+
+switch_top_single:
+  template: ["switch"]
+  custom_fields:
+    icon: !include icons/top_single.yaml
+
+switch_led_strip:
+  template: ["switch"]
+  custom_fields:
+    icon: !include icons/led_strip.yaml
+
+switch_display:
+  template: ["switch"]
+  custom_fields:
+    icon: !include icons/display.yaml
+
+switch_pm2:
+  template: ["switch"]
+  custom_fields:
+    icon: !include icons/pm2.yaml
+
+switch_smart_mirror:
+  template: ["switch"]
+  custom_fields:
+    icon: !include icons/smartmirror.yaml

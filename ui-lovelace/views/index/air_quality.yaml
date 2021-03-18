@@ -1,0 +1,54 @@
+type: horizontal-stack
+cards:
+  - type: custom:mini-graph-card
+    name: Air Quality - Outside
+    entities:
+      - air_quality.gios
+    line_color: black
+    font_size: 75
+    icon: mdi:weather-fog
+    animate: true
+    points_per_hour: 6
+    hours_to_show: 2
+    line_width: 4
+    color_thresholds:
+      - value: 0
+        color: "#26A53A"
+      - value: 12
+        color: "#87C936"
+      - value: 36
+        color: "#FFFF00"
+      - value: 60
+        color: "#FCB300"
+      - value: 84
+        color: "#F60000"
+      - value: 120
+        color: "#AD0000"
+    show:
+      fill: fade
+  - type: custom:mini-graph-card
+    name: Air Quality - Inside
+    entities:
+      - sensor.air_purifier_2h_aqi
+    line_color: black
+    font_size: 75
+    icon: mdi:weather-fog
+    points_per_hour: 6
+    hours_to_show: 2
+    line_width: 4
+    animate: true
+    color_thresholds:
+      - value: 0
+        color: "#26A53A"
+      - value: 12
+        color: "#87C936"
+      - value: 36
+        color: "#FFFF00"
+      - value: 60
+        color: "#FCB300"
+      - value: 84
+        color: "#F60000"
+      - value: 120
+        color: "#AD0000"
+    show:
+      fill: fade

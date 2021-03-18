@@ -1,0 +1,15 @@
+path: utility
+title: Utility
+panel: false
+icon: mdi:gauge
+cards:
+  - type: vertical-stack
+    cards:
+      - !include title.yaml
+      - !include energy_summary.yaml
+      - !include summary.yaml
+      - !include power_voltage.yaml
+      - !include kw.yaml
+      - !include phase1.yaml
+      - !include phase2.yaml
+      - !include phase3.yaml

@@ -1,0 +1,27 @@
+type: custom:mini-graph-card
+name: CPU & GPU Temperatures
+entities:
+  - entity: sensor.smart_mirror_cpu_temperature
+    name: CPU Temperature
+    show_graph: true
+  - entity: sensor.smart_mirror_gpu_temperature
+    name: GPU Temperature
+    show_state: true
+    show_graph: false
+line_width: 2
+animate: true
+hours_to_show: 24
+points_per_hour: 6
+color_thresholds:
+  - value: 40
+    color: "#26A53A"
+  - value: 45
+    color: "#87C936"
+  - value: 50
+    color: "#FFFF00"
+  - value: 55
+    color: "#FCB300"
+  - value: 60
+    color: "#F60000"
+  - value: 65
+    color: "#AD0000"

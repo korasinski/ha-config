@@ -1,0 +1,23 @@
+type: custom:mini-graph-card
+name: At home
+entities:
+  - entity: sensor.air_purifier_2h_temperature
+    name: Temperature
+    color: orange
+    index: 0
+    show_state: true
+  - entity: sensor.air_purifier_2h_humidity
+    name: Humidity
+    color: CornflowerBlue
+    index: 1
+    show_state: true
+    y_axis: secondary
+points_per_hour: 6
+hours_to_show: 2
+line_width: 2
+show:
+  fill: fade
+  extrema: false
+  legend: true
+  labels: true
+animate: true

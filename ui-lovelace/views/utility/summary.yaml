@@ -1,0 +1,29 @@
+type: entities
+entities:
+  - entity: sensor.energy_mqtt_usage_today
+    icon: 'mdi:gauge'
+    name: Daily usage
+    secondary_info: |
+      cost: [[ sensor.energy_mqtt_usage_today_pln ]]zł |
+      yesterday: [[ sensor.energy_usage_yesterday_mqtt ]]kWh
+    type: 'custom:secondaryinfo-entity-row'
+  - entity: sensor.energy_mqtt_usage_month
+    icon: 'mdi:calendar'
+    name: Monthly usage
+    secondary_info: |
+      cost: [[ sensor.energy_mqtt_usage_month_pln ]]zł |
+      last: [[ sensor.energy_usage_previous_month_mqtt ]]kWh
+    type: 'custom:secondaryinfo-entity-row'
+  - entity: sensor.energy_mqtt_usage_year
+    icon: 'mdi:calendar'
+    name: Yearly usage
+    secondary_info: |
+      cost: [[
+        sensor.energy_mqtt_usage_year_pln ]]zł
+    type: 'custom:secondaryinfo-entity-row'
+  - entity: sensor.energy_phase123_totalforwardactiveenergy
+    name: Counter state
+    secondary_info: >
+      [[ sensor.energy_meter.attributes.pricePerUnit ]]zł/kWh | TTL:
+      [[ sensor.energy_meter ]]zł
+    type: 'custom:secondaryinfo-entity-row'

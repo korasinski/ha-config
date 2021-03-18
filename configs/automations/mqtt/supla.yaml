@@ -1,0 +1,102 @@
+- id: mqtt_day_energy_phase123_totalforwardactiveenergy
+  alias: Energy meter - TFAE today
+  description: energy_phase123_totalforwardactiveenergy
+  trigger:
+  - platform: time
+    at: '23:59:00'
+  action:
+  - service: mqtt.publish
+    data_template:
+      payload_template: '{{ states.sensor.energy_phase123_totalforwardactiveenergy.state
+        | round(2) | float }}'
+      topic: energy_meter/day/state
+      retain: true
+  - service: mqtt.publish
+    data_template:
+      payload_template: '{{ now() }}'
+      topic: energy_meter/day/timestamp
+      retain: true
+  mode: single
+- id: mqtt_day_energy_usage
+  alias: Energy meter - usage today
+  description: energy_usage_today
+  trigger:
+  - platform: time
+    at: '23:58:00'
+  action:
+  - service: mqtt.publish
+    data_template:
+      payload_template: '{{ states.sensor.energy_mqtt_usage_today.state | round(2)
+        | float }}'
+      topic: energy_meter/yesterday/state
+      retain: true
+  - service: mqtt.publish
+    data_template:
+      payload_template: '{{ now() }}'
+      topic: energy_meter/yesterday/timestamp
+      retain: true
+  mode: single
+- id: mqtt_month_energy_phase123_totalforwardactiveenergy
+  alias: Energy meter - TFAE month 
+  description: energy_phase123_totalforwardactiveenergy
+  trigger:
+  - platform: time
+    at: 00:01:00
+  condition:
+  - condition: template
+    value_template: '{{ now().day == 1 }}'
+  action:
+  - service: mqtt.publish
+    data_template:
+      payload_template: '{{ states.sensor.energy_phase123_totalforwardactiveenergy.state
+        | round(2) | float }}'
+      topic: energy_meter/month/state
+      retain: true
+  - service: mqtt.publish
+    data_template:
+      payload_template: '{{ now() }}'
+      topic: energy_meter/month/timestamp
+      retain: true
+  mode: single
+- id: mqtt_month_energy_usage
+  alias: Energy meter - monthly usage
+  description: energy_usage_month
+  trigger:
+  - platform: time
+    at: 00:00:09
+  condition:
+    condition: template
+    value_template: '{{ now().day == 1 }}'
+  action:
+  - service: mqtt.publish
+    data_template:
+      payload_template: '{{ states.sensor.energy_mqtt_usage_month.state | round(2)
+        | float }}'
+      topic: energy_meter/month/previous/state
+      retain: true
+  - service: mqtt.publish
+    data_template:
+      payload_template: '{{ now() }}'
+      topic: energy_meter/month/previous/timestamp
+      retain: true
+- id: mqtt_year_energy_phase123_totalforwardactiveenergy
+  alias: Energy meter - TFAE year
+  description: energy_phase123_totalforwardactiveenergy
+  trigger:
+  - platform: time
+    at: 00:01:00
+  condition:
+    condition: template
+    value_template: '{{ now().timetuple().tm_yday == 1 }}'
+  action:
+  - service: mqtt.publish
+    data_template:
+      payload_template: '{{ states.sensor.energy_phase123_totalforwardactiveenergy.state
+        | round(2) | float }}'
+      topic: energy_meter/year/state
+      retain: true
+  - service: mqtt.publish
+    data_template:
+      payload_template: '{{ now() }}'
+      topic: energy_meter/year/timestamp
+      retain: true

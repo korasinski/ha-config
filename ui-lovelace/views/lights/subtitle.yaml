@@ -1,0 +1,34 @@
+type: markdown
+style: >
+  ha-card {
+    box-shadow: none;
+    height: 100%;
+    background: none;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+    text-align: left;
+    position: static;
+    margin-top: -25px;
+    margin-bottom: 0px;
+    margin-left: -10px;
+  }
+content: >
+
+  {% set lights = [
+        states.light.h801_corridor,
+        states.light.h801_ceiling,
+        states.light.h801_kitchen,
+        states.light.h801_tv,
+        states.light.h801_catfeeder,
+        states.light.h801_catlitter,
+        ] %}
+
+  {% if lights | selectattr('state','eq','on') | list | count == 0 -%}
+  Currently there are no lamps turned on.
+  {% elif lights | selectattr('state','eq','on') | list | count == 1 -%}
+  There is 1 lamp turned on.
+  {% else -%}
+  There are {{ lights | selectattr('state','eq','on') | list | count }} lamps turned on.
+  {% endif %}

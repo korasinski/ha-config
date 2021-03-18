@@ -1,0 +1,32 @@
+- alias: Security - Notify of events
+  id: events
+  trigger:
+    - platform: mqtt
+      topic: frigate/events
+  condition:
+    - '{{ trigger.payload_json["type"] == "new" }}'
+  action:
+    - service: notify.mobile_app_iphone_kuba
+      data_template:
+          title: '{{trigger.payload_json["after"]["camera"] | capitalize}} camera'
+          message: 'A {{trigger.payload_json["after"]["label"]}} was detected'
+          data:
+            url: /lovelace/cameras
+            attachment:
+              url: 'https://kwsmarthome.duckdns.org/api/frigate/notifications/{{trigger.payload_json["after"]["id"]}}/thumbnail.jpg'
+              content-type: jpg
+              hide-thumbnail: false
+            apns_headers:
+              apns-collapse-id: '{{trigger.payload_json["after"]["id"]}}'
+    - service: notify.mobile_app_iphone_klaudia
+      data_template:
+          title: '{{trigger.payload_json["after"]["camera"] | capitalize}} camera'
+          message: 'A {{trigger.payload_json["after"]["label"]}} was detected'
+          data:
+            url: /lovelace/cameras
+            attachment:
+              url: 'https://kwsmarthome.duckdns.org/api/frigate/notifications/{{trigger.payload_json["after"]["id"]}}/thumbnail.jpg'
+              content-type: jpg
+              hide-thumbnail: false
+            apns_headers:
+              apns-collapse-id: '{{trigger.payload_json["after"]["id"]}}'

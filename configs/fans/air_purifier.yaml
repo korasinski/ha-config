@@ -1,0 +1,5 @@
+- platform: xiaomi_miio
+  host: !secret air_purifier_host
+  token: !secret air_purifier_token
+  model: zhimi.airpurifier.mc1
+  name: Air Purifier 2H

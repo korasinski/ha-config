@@ -1,0 +1,20 @@
+type: horizontal-stack
+cards:
+  - type: custom:button-card
+    entity: light.h801_corridor
+    template: light
+    hold_action:
+      action: more-info
+      entity: light.h801_corridor
+  - type: custom:button-card
+    entity: light.h801_ceiling
+    template: light
+    hold_action:
+      action: more-info
+      entity: light.h801_ceiling
+  - type: custom:button-card
+    entity: light.h801_kitchen
+    template: light
+    hold_action:
+      action: more-info
+      entity: light.h801_kitchen

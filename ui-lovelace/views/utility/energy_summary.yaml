@@ -1,0 +1,28 @@
+type: custom:mini-graph-card
+name: Electricity
+entities:
+  - entity: sensor.energy_mqtt_usage_today_pln
+    name: Price
+    show_state: true
+    show_graph: false
+  - entity: sensor.energy_phase123_voltage
+    name: Voltage
+    show_state: true
+  - entity: sensor.energy_phase123_current
+    name: Current
+    show_state: true
+    y_axis: secondary
+  - entity: sensor.energy_phase123_frequency
+    name: Frequency
+    show_state: true
+    show_graph: false
+line_width: 2
+hours_to_show: 8
+points_per_hour: 1
+aggregate_func: avg
+animate: true
+font_size: 75
+show:
+  fill: fade
+  labels: true
+  labels_secondary: true

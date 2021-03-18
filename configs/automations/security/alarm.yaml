@@ -1,0 +1,25 @@
+- id: alarm
+  alias: Security - alarm
+  trigger:
+    platform: state
+    entity_id: binary_sensor.h801_corridor_pir
+    to: 'on'
+  condition:
+    condition: and
+    conditions:
+    - condition: template
+      value_template: '{{ states(''device_tracker.iphone_kuba'') != ''home'' }}'
+    - condition: template
+      value_template: '{{ states(''device_tracker.iphone_klaudia'') != ''home'' }}'
+  action:
+    service: notify.mobile_app_iphone_kuba
+    data:
+      title: ⚠️ Alarm
+      message: ⚠️ Someone is at home!
+      data:
+        push:
+          sound:
+            name: default
+            critical: 1
+            volume: 0
+  mode: restart

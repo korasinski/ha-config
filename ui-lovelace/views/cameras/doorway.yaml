@@ -1,0 +1,5 @@
+title: "Doorway"
+camera_image: 'camera.door'
+aspect_ratio: 16:9
+entities: []
+type: picture-glance

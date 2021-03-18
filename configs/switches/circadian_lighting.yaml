@@ -1,0 +1,18 @@
+- platform: circadian_lighting
+  name: NightShift
+  lights_ct:
+    - light.h801_tv
+    - light.h801_kitchen
+    - light.h801_corridor
+    - light.h801_ceiling
+  lights_brightness:
+    - light.h801_catfeeder
+    - light.h801_catlitter
+  max_brightness: 80
+  min_brightness: 20
+
+- platform: circadian_lighting
+  name: NightShift Bedroom
+  lights_ct:
+    - light.bedroom_led
+  disable_brightness_adjust: true

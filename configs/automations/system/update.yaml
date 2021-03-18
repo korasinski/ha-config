@@ -1,0 +1,16 @@
+- id: system_update
+  alias: System - Update Available
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.updater
+      from: 'off'
+      to: 'on'
+  action:
+    - service: notify.mobile_app_iphone_kuba
+      data:
+        message: "Home Assistant {{ state_attr('binary_sensor.updater', 'newest_version') }} is available."
+    
+    - service: notify.persistent_notification
+      data:
+        title: Home Assistant updater
+        message: "Home Assistant {{ state_attr('binary_sensor.updater', 'newest_version') }} is available."

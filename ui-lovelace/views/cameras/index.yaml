@@ -1,0 +1,12 @@
+path: cameras
+title: Cameras
+panel: false
+icon: mdi:camera
+cards:
+  - type: vertical-stack
+    cards:
+      - !include title.yaml
+      - !include subtitle.yaml
+      - !include doorway.yaml
+      - !include hallway.yaml
+      

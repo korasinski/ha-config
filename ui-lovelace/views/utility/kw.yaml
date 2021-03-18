@@ -1,0 +1,28 @@
+type: 'custom:mini-graph-card'
+name: Actual usage
+entities:
+  - entity: sensor.energy_phase123_poweractive_kw
+    index: 0
+group: false
+hour24: true
+hours_to_show: 48
+line_width: 2
+points_per_hour: 6
+animate: true
+show:
+  extrema: true
+  fill: fade
+  icon: true
+  labels: true
+  name: true
+  state: true
+color_thresholds:
+  - color: '#e45e65'
+    value: 2.4
+  - color: '#e0b400'
+    value: 1.2
+  - color: '#0da035'
+    value: 0.6
+  - color: '#039BE5'
+    value: 0
+color_thresholds_transition: hard

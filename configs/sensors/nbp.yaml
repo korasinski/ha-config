@@ -1,0 +1,32 @@
+- platform: rest
+  name: NBP USD
+  resource: https://api.nbp.pl/api/exchangerates/rates/c/usd/?format=json
+  value_template: "{{ value_json.rates[0].ask }}"
+  unit_of_measurement: PLN
+  json_attributes_path: "$.rates[0]"
+  json_attributes:
+    - bid
+    - effectiveDate
+  scan_interval: 3600
+
+- platform: rest
+  name: NBP GBP
+  resource: https://api.nbp.pl/api/exchangerates/rates/c/gbp/?format=json
+  value_template: "{{ value_json.rates[0].ask }}"
+  unit_of_measurement: PLN
+  json_attributes_path: "$.rates[0]"
+  json_attributes:
+    - bid
+    - effectiveDate
+  scan_interval: 3600
+
+- platform: rest
+  name: NBP EUR
+  resource: https://api.nbp.pl/api/exchangerates/rates/c/eur/?format=json
+  value_template: "{{ value_json.rates[0].ask }}"
+  unit_of_measurement: PLN
+  json_attributes_path: "$.rates[0]"
+  json_attributes:
+    - bid
+    - effectiveDate
+  scan_interval: 3600

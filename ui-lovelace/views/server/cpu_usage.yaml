@@ -1,0 +1,35 @@
+type: custom:mini-graph-card
+entities:
+  - entity: sensor.processor_use_percent
+    name: CPU Usage
+    show_graph: true
+  - entity: sensor.load_1m
+    show_state: true
+    show_graph: false
+    unit: load 1m
+  - entity: sensor.load_5m
+    show_state: true
+    show_graph: false
+    unit: load 5m
+  - entity: sensor.load_15m
+    show_state: true
+    show_graph: false
+    unit: load 15m
+line_color: orange
+line_width: 2
+animate: true
+hours_to_show: 24
+points_per_hour: 6
+color_thresholds:
+  - value: 20
+    color: "#26A53A"
+  - value: 30
+    color: "#87C936"
+  - value: 40
+    color: "#FFFF00"
+  - value: 50
+    color: "#FCB300"
+  - value: 60
+    color: "#F60000"
+  - value: 70
+    color: "#AD0000"

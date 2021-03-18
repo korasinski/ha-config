@@ -1,0 +1,5 @@
+- platform: miio2
+  id: mi_robot
+  host: !secret mirobot_host
+  token: !secret mirobot_token
+  name: Mi Robot Vacuum Mop Pro 

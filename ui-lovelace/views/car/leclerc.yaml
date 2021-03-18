@@ -1,0 +1,54 @@
+type: vertical-stack
+cards:
+  - type: horizontal-stack
+    cards:
+      - type: custom:mini-graph-card
+        name: "ON"
+        entities:
+          - sensor.leclerc_on
+        line_color: black
+        line_width: 4
+        font_size: 75
+        update_interval: 30
+        hours_to_show: 168
+        points_per_hour: 0.05
+        aggregate_func: max
+        animate: true
+      - type: custom:mini-graph-card
+        name: PB95
+        entities:
+          - sensor.leclerc_pb95
+        line_color: green
+        line_width: 4
+        font_size: 75
+        update_interval: 30
+        hours_to_show: 168
+        points_per_hour: 0.05
+        aggregate_func: max
+        animate: true
+  - type: horizontal-stack
+    cards:
+      - type: custom:mini-graph-card
+        name: PB98
+        entities:
+          - sensor.leclerc_pb98
+        line_color: gray
+        line_width: 4
+        font_size: 75
+        update_interval: 30
+        hours_to_show: 168
+        points_per_hour: 0.05
+        aggregate_func: max
+        animate: true
+      - type: custom:mini-graph-card
+        name: LPG
+        entities:
+          - sensor.leclerc_lpg
+        line_color: blue
+        line_width: 4
+        font_size: 75
+        update_interval: 30
+        hours_to_show: 168
+        points_per_hour: 0.05
+        aggregate_func: max
+        animate: true

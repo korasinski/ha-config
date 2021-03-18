@@ -1,0 +1,25 @@
+- platform: systemmonitor
+  resources:
+    - type: disk_use_percent
+      arg: /
+    - type: disk_use
+      arg: /
+    - type: disk_free
+      arg: /
+    - type: memory_free
+    - type: memory_use_percent
+    - type: memory_use
+    - type: load_1m
+    - type: load_5m
+    - type: load_15m
+    - type: network_in
+      arg: ens18
+    - type: network_out
+      arg: ens18
+    - type: last_boot
+    - type: processor_use
+
+- platform: mqtt
+  unique_id: homeassistant_vm
+  state_topic: "server/proxmox/vm/homeassistant"
+  name: HomeAssistant VM

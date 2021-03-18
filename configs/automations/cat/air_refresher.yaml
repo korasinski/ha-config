@@ -1,0 +1,25 @@
+- id: air_refresher
+  alias: Cat litter - air refresher
+  description: Automate air refresher when cat in cat litter
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.h801_catlitter_pir
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - entity_id: switch.h801_airrefresher
+    service: switch.turn_on
+  - delay: 00:00:10
+  - entity_id: switch.h801_airrefresher
+    service: switch.turn_off
+  - delay: 00:00:30
+  - data: {}
+    entity_id: switch.h801_airrefresher
+    service: switch.turn_on
+  - delay: 00:00:10
+  - data: {}
+    entity_id: switch.h801_airrefresher
+    service: switch.turn_off
+  mode: single
+  max_exceeded: silent

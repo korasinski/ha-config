@@ -1,0 +1,14 @@
+path: index
+title: Home
+panel: false
+icon: mdi:home
+# badges:
+#   - entity: person.kuba
+cards:
+  - type: vertical-stack
+    cards:
+      - !include title.yaml
+      - !include subtitle.yaml
+      - !include weather.yaml
+      - !include temperature.yaml
+      - !include air_quality.yaml

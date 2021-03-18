@@ -1,0 +1,13 @@
+path: switches
+title: Switches
+panel: false
+icon: mdi:light-switch
+cards:
+  - type: vertical-stack
+    cards:
+      - !include title.yaml
+      - !include subtitle.yaml
+      - !include 1_row.yaml
+      - !include 2_row.yaml
+      - !include 3_row.yaml
+

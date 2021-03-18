@@ -1,0 +1,23 @@
+type: custom:mini-graph-card
+entities:
+  - entity: sensor.smart_mirror_cpu_usage
+    name: CPU Usage
+    show_graph: true
+line_color: orange
+line_width: 2
+animate: true
+hours_to_show: 24
+points_per_hour: 6
+color_thresholds:
+  - value: 20
+    color: "#26A53A"
+  - value: 30
+    color: "#87C936"
+  - value: 40
+    color: "#FFFF00"
+  - value: 50
+    color: "#FCB300"
+  - value: 60
+    color: "#F60000"
+  - value: 70
+    color: "#AD0000"

@@ -1,0 +1,37 @@
+type: markdown
+style: >
+  ha-card {
+    box-shadow: none;
+    height: 100%;
+    background: none;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+    text-align: left;
+    position: static;
+    margin-top: -25px;
+    margin-bottom: 0px;
+    margin-left: -10px;
+  }
+content: >
+
+  {% set switches = [
+        states.switch.entrance_1,
+        states.switch.ceiling,
+        states.switch.kitchen_1,
+        states.switch.living_room_1,
+        states.switch.living_room_2,
+        states.switch.corridor_1,
+        states.switch.bedroom_1,
+        states.switch.bedroom_2,
+        states.switch.kitchen_2,
+        ] %}
+
+  {% if switches | selectattr('state','eq','on') | list | count == 0 -%}
+  Currently there are no switches turned on.
+  {% elif switches | selectattr('state','eq','on') | list | count == 1 -%}
+  There is 1 switch turned on.
+  {% else -%}
+  There are {{ switches | selectattr('state','eq','on') | list | count }} switches turned on.
+  {% endif %}

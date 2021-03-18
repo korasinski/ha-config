@@ -1,0 +1,14 @@
+- platform: template
+  sensors:
+    air_purifier_2h_aqi:
+      friendly_name: "Air Purifier AQI"
+      unit_of_measurement: "µg/m³"
+      value_template: "{{ state_attr('fan.air_purifier_2h', 'aqi') }}"
+    air_purifier_2h_humidity:
+      friendly_name: "Air Purifier Humidity"
+      unit_of_measurement: "%"
+      value_template: "{{ state_attr('fan.air_purifier_2h', 'humidity') }}"
+    air_purifier_2h_temperature:
+      friendly_name: "Air Purifier Temperature"
+      unit_of_measurement: "°C"
+      value_template: "{{ state_attr('fan.air_purifier_2h', 'temperature') }}"

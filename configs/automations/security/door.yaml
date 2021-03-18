@@ -1,0 +1,100 @@
+# Kuba
+- id: doors_opened_kuba
+  alias: Security - door lock opened (Kuba)
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.h801_doorlock
+      to: 'on'
+      for: "00:30:00"
+  condition:
+    - condition: template
+      value_template: '{{ states(''person.kuba'') == ''home'' }}'
+  action:
+    - service: notify.mobile_app_iphone_kuba
+      data:
+        title: 🚪 Door lock
+        message: 🔓 Door lock is opened for 30 minutes, please close it. 
+        data:
+          push:
+            badge: 1
+            sound:
+              name: default
+              critical: 1
+              volume: 0.5
+          apns_headers:
+            apns-collapse-id: 'door-alert'
+  mode: single
+  max_exceeded: silent
+
+
+- id: doors_closed_kuba
+  alias: Security - door lock closed (Kuba)
+  trigger:
+    platform: state
+    entity_id: binary_sensor.h801_doorlock
+    to: 'off'
+  condition:
+    - condition: template
+      value_template: '{{ states(''person.kuba'') == ''home'' }}'
+  action:
+    service: notify.mobile_app_iphone_kuba
+    data:
+      message: delete_alert 
+      data:
+        push:
+          badge: 0
+        apns_headers:
+          apns-collapse-id: 'door-alert'
+  mode: single
+  max_exceeded: silent
+
+
+# Klaudia
+- id: doors_opened_klaudia
+  alias: Security - door lock opened (Klaudia)
+  trigger:
+    platform: state
+    entity_id: binary_sensor.h801_doorlock
+    to: 'on'
+    for: "00:30:00"
+  condition:
+    - condition: template
+      value_template: '{{ states(''person.klaudia'') == ''home'' }}'
+  action:
+    - service: notify.mobile_app_iphone_klaudia
+      data:
+        title: 🚪 Door lock
+        message: 🔓 Door lock is opened for 30 minutes, please close it. 
+        data:
+          push:
+            badge: 1
+            sound:
+              name: default
+              critical: 1
+              volume: 0.5
+          apns_headers:
+            apns-collapse-id: 'door-alert'
+  mode: single
+  max_exceeded: silent
+
+
+- id: doors_closed_klaudia
+  alias: Security - door lock closed (Klaudia)
+  trigger:
+    platform: state
+    entity_id: binary_sensor.h801_doorlock
+    to: 'off'
+  condition:
+    - condition: template
+      value_template: '{{ states(''person.klaudia'') == ''home'' }}'
+  action:
+    service: notify.mobile_app_iphone_klaudia
+    data:
+      message: delete_alert 
+      data:
+        push:
+          badge: 0
+        apns_headers:
+          apns-collapse-id: 'door-alert'
+  mode: single
+  max_exceeded: silent

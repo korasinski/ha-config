@@ -1,0 +1,5 @@
+type: map
+entities:
+  - person.kuba
+  - person.klaudia
+hours_to_show: 72

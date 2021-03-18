@@ -1,0 +1,30 @@
+smart_mirror_reboot:
+  url: !secret smartmirror_power
+  method: POST
+  content_type: "application/json"
+  payload: '{"cmd":"reboot"}'
+
+smart_mirror_cancel:
+  url: !secret smartmirror_power
+  method: POST
+  content_type: "application/json"
+  payload: '{"cmd":"cancel"}'
+
+smart_mirror_pm2_start:
+  url: !secret smartmirror_pm2
+  method: POST
+  content_type: "application/json"
+  payload: '{"cmd":"start"}'
+
+smart_mirror_pm2_stop:
+  url: !secret smartmirror_pm2
+  method: POST
+  content_type: "application/json"
+  payload: '{"cmd":"stop"}'
+
+smart_mirror_pm2_restart:
+  url: !secret smartmirror_pm2
+  method: POST
+  content_type: "application/json"
+  payload: '{"cmd":"restart"}'
+

@@ -1,0 +1,3 @@
+type: weather-forecast
+entity: weather.home
+show_forecast: true

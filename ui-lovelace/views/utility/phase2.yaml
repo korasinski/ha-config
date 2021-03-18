@@ -1,0 +1,29 @@
+type: custom:mini-graph-card
+name: Phase 2
+entities:
+  - entity: sensor.energy_phase2_voltage
+    name: Voltage
+    index: 0
+    show_state: true
+  - entity: sensor.energy_phase2_current
+    name: Current
+    index: 1
+    y_axis: secondary
+    show_state: true
+  - entity: sensor.energy_phase2_totalforwardactiveenergy
+    name: Frequency
+    show_state: true
+    show_graph: false
+  - entity: sensor.energy_phase2_frequency
+    name: Usage
+    show_state: true
+    show_graph: false
+hour24: true
+animate: true
+points_per_hour: 30
+hours_to_show: 2
+line_width: 2
+show:
+  fill: fade
+  labels: true
+  legend: false

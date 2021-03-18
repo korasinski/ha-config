@@ -1,0 +1,15 @@
+type: custom:mini-graph-card
+entities:
+  - entity: sensor.speedtest_download
+    show_state: true
+    name: Download
+    show_graph: true
+  - entity: sensor.speedtest_upload
+    show_state: true
+    name: Upload
+    show_graph: true
+line_width: 2
+animate: true
+name: SpeedTest
+hours_to_show: 24
+points_per_hour: 6

@@ -1,0 +1,22 @@
+- id: smart_mirror_display
+  alias: Smart Mirror - display
+  description: Turn on display on Smart Mirror when movement is detected
+  trigger:
+  - platform: state
+    entity_id: 
+      - binary_sensor.h801_corridor_pir
+      - binary_sensor.door_person_motion
+      - binary_sensor.door_cat_motion
+      - binary_sensor.door_bicycle_motion
+      - binary_sensor.door_bag_motion
+    from: 'off'
+    to: 'on'
+
+  action:
+  - entity_id: switch.smart_mirror_display
+    service: switch.turn_on
+  - delay: 00:15:00
+  - entity_id: switch.smart_mirror_display
+    service: switch.turn_off
+  mode: single
+  max_exceeded: silent

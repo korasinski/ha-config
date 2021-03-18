@@ -1,0 +1,20 @@
+type: horizontal-stack
+cards:
+  - type: custom:button-card
+    entity: switch.entrance_1
+    template: switch_top_light
+    hold_action:
+      action: more-info
+      entity: switch.entrance_1
+  - type: custom:button-card
+    entity: switch.ceiling
+    template: switch_led_strip
+    hold_action:
+      action: more-info
+      entity: switch.ceiling
+  - type: custom:button-card
+    entity: switch.kitchen_1
+    template: switch_top_single
+    hold_action:
+      action: more-info
+      entity: switch.kitchen_1

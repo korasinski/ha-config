@@ -1,0 +1,13 @@
+- id: car_location
+  alias: Car - location update
+  description: ''
+  mode: single
+  trigger:
+    - platform: time_pattern
+      minutes: '00'
+  condition: []
+  action:
+    - service: notify.mobile_app_iphone_bmw
+      data: {
+        message: "request_location_update"
+      }

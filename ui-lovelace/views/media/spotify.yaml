@@ -1,0 +1,6 @@
+type: custom:mini-media-player
+entity: media_player.spotify_kuba_orasinski
+icon: mdi:spotify
+artwork: cover
+info: scroll
+name: Spotify

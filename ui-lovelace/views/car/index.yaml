@@ -1,0 +1,12 @@
+path: car
+title: Car
+panel: false
+icon: mdi:car
+cards:
+  - type: vertical-stack
+    cards:
+      - !include title.yaml
+      - !include subtitle.yaml
+      - !include maps.yaml
+      - !include leclerc.yaml
+

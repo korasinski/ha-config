@@ -1,0 +1,3 @@
+- platform: netia_player
+  host: !secret netia_player_host
+  app_support: false

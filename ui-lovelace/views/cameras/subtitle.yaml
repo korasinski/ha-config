@@ -1,0 +1,19 @@
+type: markdown
+style: >
+  ha-card {
+    box-shadow: none;
+    height: 100%;
+    background: none;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+    text-align: left;
+    position: static;
+    margin-top: -25px;
+    margin-bottom: 0px;
+    margin-left: -10px;
+  }
+content: >
+
+  Last motion event was detected {{ relative_time(states.binary_sensor.door_person_motion.last_changed) }} ago.

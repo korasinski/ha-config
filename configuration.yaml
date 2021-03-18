@@ -18,15 +18,9 @@ logger:
 
 # Configs
 automation: !include_dir_merge_list configs/automations
-binary_sensor: !include_dir_merge_list configs/binary_sensors
-camera: !include_dir_merge_list configs/cameras
 climate: !include_dir_merge_list configs/climates
 fan: !include_dir_merge_list configs/fans
-group: !include_dir_merge_list configs/groups
-input_boolean: !include configs/input_boolean.yaml
 media_player: !include_dir_merge_list configs/media_players
-scene: !include_dir_merge_list configs/scenes
-script: !include configs/scripts/scripts.yaml
 sensor: !include_dir_merge_list configs/sensors
 switch: !include_dir_merge_list configs/switches
 vacuum: !include_dir_merge_list configs/vacuum

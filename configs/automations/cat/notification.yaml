@@ -1,0 +1,26 @@
+- id: litter_notification
+  alias: Cat litter - notification
+  description: 'Send message when cat is in the litter'
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.h801_catlitter_pir
+    to: 'on'
+  action:
+  - service: notify.mobile_app_iphone_kuba
+    data:
+      title: 🚾 Cat liter
+      message: 😼 Maks in toilet
+      data:
+        push:
+          apns_headers:
+            apns-collapse-id: 'cat_litter'
+  - service: notify.mobile_app_iphone_klaudia
+    data:
+      title: 🚾 Cat liter
+      message: 😼 Maks in toilet
+      data:
+        push:
+          apns_headers:
+            apns-collapse-id: 'cat_litter'
+  mode: single
+  max_exceeded: silent

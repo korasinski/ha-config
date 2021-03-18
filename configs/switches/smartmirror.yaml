@@ -1,0 +1,29 @@
+- platform: rest
+  name: Smart Mirror
+  resource: !secret smartmirror_power
+  body_on: '{"cmd": "reboot"}'
+  body_off: '{"cmd": "shutdown"}'
+  is_on_template: "{{ value_json.status }}"
+  method: post
+  headers:
+    Content-Type: application/json
+
+- platform: rest
+  name: Smart Mirror Display
+  resource: !secret smartmirror_display
+  body_on: '{"cmd": "on"}'
+  body_off: '{"cmd": "off"}'
+  is_on_template: "{{ value_json.display }}"
+  method: post
+  headers:
+    Content-Type: application/json
+
+- platform: rest
+  name: Smart Mirror PM2
+  resource: !secret smartmirror_pm2
+  body_on: '{"cmd": "start"}'
+  body_off: '{"cmd": "stop"}'
+  is_on_template: "{{ value_json.status }}"
+  method: post
+  headers:
+    Content-Type: application/json

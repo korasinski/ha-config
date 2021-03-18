@@ -1,0 +1,6 @@
+type: custom:mini-media-player
+entity: media_player.apple_tv_4k
+icon: mdi:apple
+artwork: cover
+info: scroll
+name: Apple TV
