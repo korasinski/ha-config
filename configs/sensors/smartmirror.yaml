@@ -13,23 +13,28 @@
 - platform: template
   sensors:
     smart_mirror_display:
+      unique_id: smart_mirror_display
       value_template: '{{ state_attr("sensor.smart_mirror", "display") }}'
       friendly_name: Smart Mirror Display Status
     smart_mirror_cpu_temperature:
+      unique_id: smart_mirror_cpu_temperature
       value_template: '{{ state_attr("sensor.smart_mirror", "cpu_temp") | float }}'
       device_class: temperature
       unit_of_measurement: "°C"
       friendly_name: Smart Mirror CPU Temperature
     smart_mirror_cpu_usage:
+      unique_id: smart_mirror_cpu_usage
       value_template: '{{ state_attr("sensor.smart_mirror", "cpu_usage") | float }}'
       unit_of_measurement: "%"
       friendly_name: Smart Mirror CPU Usage 
     smart_mirror_gpu_temperature:
+      unique_id: smart_mirror_gpu_temperature
       value_template: '{{ state_attr("sensor.smart_mirror", "gpu_temp") | float }}'
       device_class: temperature
       unit_of_measurement: "°C"
       friendly_name: Smart Mirror GPU Temperature      
     smart_mirror_disk_usage:
+      unique_id: smart_mirror_disk_usage
       value_template: '{{ state_attr("sensor.smart_mirror", "disk_usage") | float }}'
       unit_of_measurement: "%"
       friendly_name: Smart Mirror Disk Usage

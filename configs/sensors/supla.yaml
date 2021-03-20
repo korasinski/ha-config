@@ -14,21 +14,25 @@
   sensors:
     #Frequency
     energy_phase1_frequency:
+      unique_id: energy_phase1_frequency
       value_template: '{{ states.sensor.energy_meter.attributes.phases[0].frequency }}'
       device_class: power
       unit_of_measurement: 'Hz'
       friendly_name: "Phase 1 - Frequency"
     energy_phase2_frequency:
+      unique_id: energy_phase2_frequency
       value_template: '{{ states.sensor.energy_meter.attributes.phases[1].frequency }}'
       device_class: power
       unit_of_measurement: 'Hz'
       friendly_name: "Phase 2 - Frequency"
     energy_phase3_frequency:
+      unique_id: energy_phase3_frequency
       value_template: '{{ states.sensor.energy_meter.attributes.phases[2].frequency }}'
       device_class: power
       unit_of_measurement: 'Hz'
       friendly_name: "Phase 3 - Frequency"
     energy_phase123_frequency:
+      unique_id: energy_phase123_frequency
       value_template: >-
         {{ (((states.sensor.energy_phase1_frequency.state | float)
         + (states.sensor.energy_phase2_frequency.state | float) 
@@ -40,21 +44,25 @@
     
     #Voltage
     energy_phase1_voltage:
+      unique_id: energy_phase1_voltage
       value_template: '{{ states.sensor.energy_meter.attributes.phases[0].voltage }}'
       device_class: power
       unit_of_measurement: 'V'
       friendly_name: "Phase 1 - Voltage"
     energy_phase2_voltage:
+      unique_id: energy_phase2_voltage
       value_template: '{{ states.sensor.energy_meter.attributes.phases[1].voltage }}'
       device_class: power
       unit_of_measurement: 'V'
       friendly_name: "Phase 2 - Voltage"
     energy_phase3_voltage:
+      unique_id: energy_phase3_voltage
       value_template: '{{ states.sensor.energy_meter.attributes.phases[2].voltage }}'
       device_class: power
       unit_of_measurement: 'V'
       friendly_name: "Phase 3 - Voltage"
     energy_phase123_voltage:
+      unique_id: energy_phase123_voltage
       value_template: >-
         {{ (((states.sensor.energy_phase1_voltage.state | float)
         + (states.sensor.energy_phase2_voltage.state | float) 
@@ -64,24 +72,27 @@
       device_class: power
       icon_template: mdi:gauge
     
-    
     #Current
     energy_phase1_current:
+      unique_id: energy_phase1_current
       value_template: '{{ states.sensor.energy_meter.attributes.phases[0].current }}'
       device_class: power
       unit_of_measurement: 'A'
       friendly_name: "Phase 1 - Current"
     energy_phase2_current:
+      unique_id: energy_phase2_current
       value_template: '{{ states.sensor.energy_meter.attributes.phases[1].current }}'
       device_class: power
       unit_of_measurement: 'A'
       friendly_name: "Phase 2 - Current"
     energy_phase3_current:
+      unique_id: energy_phase3_current
       value_template: '{{ states.sensor.energy_meter.attributes.phases[2].current }}'
       device_class: power
       unit_of_measurement: 'A'
       friendly_name: "Phase 3 - Current"
     energy_phase123_current:
+      unique_id: energy_phase123_current
       value_template: >-
         {{ ((states.sensor.energy_phase1_current.state | float)
         + (states.sensor.energy_phase2_current.state | float) 
@@ -93,21 +104,25 @@
     
     #powerActive
     energy_phase1_poweractive:
+      unique_id: energy_phase1_poweractive
       value_template: '{{ states.sensor.energy_meter.attributes.phases[0].powerActive }}'
       device_class: power
       unit_of_measurement: 'W'
       friendly_name: "Phase 1 - Power active"
     energy_phase2_poweractive:
+      unique_id: energy_phase2_poweractive
       value_template: '{{ states.sensor.energy_meter.attributes.phases[1].powerActive }}'
       device_class: power
       unit_of_measurement: 'W'
       friendly_name: "Phase 2 - Power active"
     energy_phase3_poweractive:
+      unique_id: energy_phase3_poweractive
       value_template: '{{ states.sensor.energy_meter.attributes.phases[2].powerActive }}'
       device_class: power
       unit_of_measurement: 'W'
       friendly_name: "Phase 3 - Power active"
     energy_phase123_poweractive:
+      unique_id: energy_phase123_poweractive
       value_template: >-
         {{ ((states.sensor.energy_phase1_poweractive.state | float)
         + (states.sensor.energy_phase2_poweractive.state | float) 
@@ -117,6 +132,7 @@
       device_class: power
       icon_template: mdi:gauge
     energy_phase123_poweractive_kw:
+      unique_id: energy_phase123_poweractive_kw
       value_template: >-
         {{ (((states.sensor.energy_phase1_poweractive.state | float)
         + (states.sensor.energy_phase2_poweractive.state | float) 
@@ -128,21 +144,25 @@
     
     #powerReactive
     energy_phase1_powerreactive:
+      unique_id: energy_phase1_powerreactive
       value_template: '{{ states.sensor.energy_meter.attributes.phases[0].powerReactive }}'
       device_class: power
       unit_of_measurement: 'var'
       friendly_name: "Phase 1 - Power reactive"
     energy_phase2_powerreactive:
+      unique_id: energy_phase2_powerreactive
       value_template: '{{ states.sensor.energy_meter.attributes.phases[1].powerReactive }}'
       device_class: power
       unit_of_measurement: 'var'
       friendly_name: "Phase 2 - Power reactive"
     energy_phase3_powerreactive:
+      unique_id: energy_phase3_powerreactive
       value_template: '{{ states.sensor.energy_meter.attributes.phases[2].powerReactive }}'
       device_class: power
       unit_of_measurement: 'var'
       friendly_name: "Phase 3 - Power reactive"
     energy_phase123_powerreactive:
+      unique_id: energy_phase123_powerreactive
       value_template: >-
         {{ ((states.sensor.energy_phase1_poweractive.state | float)
         + (states.sensor.energy_phase2_poweractive.state | float) 
@@ -152,6 +172,7 @@
       device_class: power
       icon_template: mdi:gauge
     energy_phase123_powerreactive_kvar:
+      unique_id: energy_phase123_powerreactive_kvar
       value_template: >-
         {{ (((states.sensor.energy_phase1_poweractive.state | float)
         + (states.sensor.energy_phase2_poweractive.state | float) 
@@ -163,21 +184,25 @@
       
     #powerApparent
     energy_phase1_powerapparent:
+      unique_id: energy_phase1_powerapparent
       value_template: '{{ states.sensor.energy_meter.attributes.phases[0].powerApparent}}'
       device_class: power
       unit_of_measurement: 'VA'
       friendly_name: "Phase 1 - Power apparent"
     energy_phase2_powerapparent:
+      unique_id: energy_phase2_powerapparent
       value_template: '{{ states.sensor.energy_meter.attributes.phases[1].powerApparent }}'
       device_class: power
       unit_of_measurement: 'VA'
       friendly_name: "Phase 2 - Power apparent"
     energy_phase3_powerapparent:
+      unique_id: energy_phase3_powerapparent
       value_template: '{{ states.sensor.energy_meter.attributes.phases[2].powerApparent }}'
       device_class: power
       unit_of_measurement: 'VA'
       friendly_name: "Phase 3 - Power apparent"
     energy_phase123_powerapparent:
+      unique_id: energy_phase123_powerapparent
       value_template: >-
         {{ ((states.sensor.energy_phase1_powerapparent.state | float)
         + (states.sensor.energy_phase2_powerapparent.state | float) 
@@ -187,6 +212,7 @@
       device_class: power
       icon_template: mdi:gauge
     energy_phase123_powerapparent_kva:
+      unique_id: energy_phase123_powerapparent_kva
       value_template: >-
         {{ (((states.sensor.energy_phase1_powerapparent.state | float)
         + (states.sensor.energy_phase2_powerapparent.state | float) 
@@ -198,16 +224,19 @@
       
     #powerFactor
     energy_phase1_powerfactor:
+      unique_id: energy_phase1_powerfactor
       value_template: '{{ states.sensor.energy_meter.attributes.phases[0].powerFactor}}'
       device_class: power
       unit_of_measurement: 'VA'
       friendly_name: "Phase 1 - Power factor"
     energy_phase2_powerfactor:
+      unique_id: energy_phase2_powerfactor
       value_template: '{{ states.sensor.energy_meter.attributes.phases[1].powerFactor }}'
       device_class: power
       unit_of_measurement: 'VA'
       friendly_name: "Phase 2 - Power factor"
     energy_phase3_powerfactor:
+      unique_id: energy_phase3_powerfactor
       value_template: '{{ states.sensor.energy_meter.attributes.phases[2].powerFactor }}'
       device_class: power
       unit_of_measurement: 'VA'
@@ -215,16 +244,19 @@
       
     #phaseAngle
     energy_phase1_phaseangle:
+      unique_id: energy_phase1_phaseangle
       value_template: '{{ states.sensor.energy_meter.attributes.phases[0].phaseAngle }}'
       device_class: power
       unit_of_measurement: '°'
       friendly_name: "Phase 1 - Phase angle"
     energy_phase2_phaseangle:
+      unique_id: energy_phase2_phaseangle
       value_template: '{{ states.sensor.energy_meter.attributes.phases[1].phaseAngle }}'
       device_class: power
       unit_of_measurement: '°'
       friendly_name: "Phase 2 - Phase angle"
     energy_phase3_phaseangle:
+      unique_id: energy_phase3_phaseangle
       value_template: '{{ states.sensor.energy_meter.attributes.phases[2].phaseAngle }}'
       device_class: power
       unit_of_measurement: '°'
@@ -232,21 +264,25 @@
     
     #totalForwardActiveEnergy
     energy_phase1_totalforwardactiveenergy:
+      unique_id: energy_phase1_totalforwardactiveenergy
       value_template: '{{ states.sensor.energy_meter.attributes.phases[0].totalForwardActiveEnergy }}'
       device_class: power
       unit_of_measurement: 'kWh'
       friendly_name: "Phase 1 - Total forwarded active energy"
     energy_phase2_totalforwardactiveenergy:
+      unique_id: energy_phase2_totalforwardactiveenergy
       value_template: '{{ states.sensor.energy_meter.attributes.phases[1].totalForwardActiveEnergy }}'
       device_class: power
       unit_of_measurement: 'kWh'
       friendly_name: "Phase 2 - Total forwarded active energy"
     energy_phase3_totalforwardactiveenergy:
+      unique_id: energy_phase3_totalforwardactiveenergy
       value_template: '{{ states.sensor.energy_meter.attributes.phases[2].totalForwardActiveEnergy }}'
       device_class: power
       unit_of_measurement: 'kWh'
       friendly_name: "Phase 3 - Total forwarded active energy"
     energy_phase123_totalforwardactiveenergy:
+      unique_id: energy_phase123_totalforwardactiveenergy
       value_template: >-
         {{ ((states.sensor.energy_phase1_totalforwardactiveenergy.state | float)
         + (states.sensor.energy_phase2_totalforwardactiveenergy.state | float) 
@@ -258,21 +294,25 @@
     
     #totalReverseActiveEnergy
     energy_phase1_totalreverseactiveenergy:
+      unique_id: energy_phase1_totalreverseactiveenergy
       value_template: '{{ states.sensor.energy_meter.attributes.phases[0].totalReverseActiveEnergy }}'
       device_class: power
       unit_of_measurement: 'kWh'
       friendly_name: "Phase 1 - Total reversed active energy"
     energy_phase2_totalreverseactiveenergy:
+      unique_id: energy_phase2_totalreverseactiveenergy
       value_template: '{{ states.sensor.energy_meter.attributes.phases[1].totalReverseActiveEnergy }}'
       device_class: power
       unit_of_measurement: 'kWh'
       friendly_name: "Phase 2 - Total reversed active energy"
     energy_phase3_totalreverseactiveenergy:
+      unique_id: energy_phase3_totalreverseactiveenergy
       value_template: '{{ states.sensor.energy_meter.attributes.phases[2].totalReverseActiveEnergy }}'
       device_class: power
       unit_of_measurement: 'kWh'
       friendly_name: "Phase 3 - Total reversed active energy"
     energy_phase123_totalreverseactiveenergy:
+      unique_id: energy_phase123_totalreverseactiveenergy
       value_template: >-
         {{ ((states.sensor.energy_phase1_totalreverseactiveenergy.state | float)
         + (states.sensor.energy_phase2_totalreverseactiveenergy.state | float) 
@@ -284,21 +324,25 @@
       
     #totalForwardReactiveEnergy
     energy_phase1_totalforwardreactiveenergy:
+      unique_id: energy_phase1_totalforwardreactiveenergy
       value_template: '{{ states.sensor.energy_meter.attributes.phases[0].totalForwardReactiveEnergy }}'
       device_class: power
       unit_of_measurement: 'kvarh'
       friendly_name: "Phase 1 - Total forwarded reactive energy"
     energy_phase2_totalforwardreactiveenergy:
+      unique_id: energy_phase2_totalforwardreactiveenergy
       value_template: '{{ states.sensor.energy_meter.attributes.phases[1].totalForwardReactiveEnergy }}'
       device_class: power
       unit_of_measurement: 'kvarh'
       friendly_name: "Phase 2 - Total forwarded reactive energy"
     energy_phase3_totalforwardreactiveenergy:
+      unique_id: energy_phase3_totalforwardreactiveenergy
       value_template: '{{ states.sensor.energy_meter.attributes.phases[2].totalForwardReactiveEnergy }}'
       device_class: power
       unit_of_measurement: 'kvarh'
       friendly_name: "Phase 3 - Total forwarded reactive energy"
     energy_phase123_totalforwardreactiveenergy:
+      unique_id: energy_phase123_totalforwardreactiveenergy
       value_template: >-
         {{ ((states.sensor.energy_phase1_totalforwardreactiveenergy.state | float)
         + (states.sensor.energy_phase2_totalforwardreactiveenergy.state | float) 
@@ -310,21 +354,25 @@
       
     #totalReverseReactiveEnergy
     energy_phase1_totalreversereactiveenergy:
+      unique_id: energy_phase1_totalreversereactiveenergy
       value_template: '{{ states.sensor.energy_meter.attributes.phases[0].totalReverseReactiveEnergy }}'
       device_class: power
       unit_of_measurement: 'kvarh'
       friendly_name: "Phase 1 - Total reversed reactive energy"
     energy_phase2_totalreversereactiveenergy:
+      unique_id: energy_phase2_totalreversereactiveenergy
       value_template: '{{ states.sensor.energy_meter.attributes.phases[1].totalReverseReactiveEnergy }}'
       device_class: power
       unit_of_measurement: 'kvarh'
       friendly_name: "Phase 2 - Total reversed reactive energy"
     energy_phase3_totalreversereactiveenergy:
+      unique_id: energy_phase3_totalreversereactiveenergy
       value_template: '{{ states.sensor.energy_meter.attributes.phases[2].totalReverseReactiveEnergy }}'
       device_class: power
       unit_of_measurement: 'kvarh'
       friendly_name: "Phase 3 - Total reversed reactive energy"
     energy_phase123_totalreversereactiveenergy:
+      unique_id: energy_phase123_totalreversereactiveenergy
       value_template: >-
         {{ ((states.sensor.energy_phase1_totalreversereactiveenergy.state | float)
         + (states.sensor.energy_phase2_totalreversereactiveenergy.state | float) 
@@ -335,6 +383,7 @@
       icon_template: mdi:gauge
       
     energy_mqtt_usage_today:
+      unique_id: energy_mqtt_usage_today
       unit_of_measurement: 'kW'
       friendly_name: "Energy usage today"
       device_class: power
@@ -344,12 +393,14 @@
         {{ (aktualny - koniec_dnia )|round(2) }}
 
     energy_mqtt_usage_today_pln:
+      unique_id: energy_mqtt_usage_today_pln
       unit_of_measurement: 'PLN'
       friendly_name: "Energy usage today in PLN"
       value_template: >-
        {{ ((states.sensor.energy_meter.attributes.pricePerUnit | float ) * ( states.sensor.energy_mqtt_usage_today.state |float )) | round(2) }}
 
     energy_mqtt_usage_month:
+      unique_id: energy_mqtt_usage_month
       unit_of_measurement: 'kW'
       friendly_name: "Energy usage monthly"
       device_class: power
@@ -358,12 +409,14 @@
         {% set aktualny = states.sensor.energy_phase123_totalforwardactiveenergy.state| float %}
         {{ (aktualny - koniec_mca )|round(0) }}
     energy_mqtt_usage_month_pln:
+      unique_id: energy_mqtt_usage_month_pln
       unit_of_measurement: 'PLN'
       friendly_name: "Energy usage monthly in PLN"
       value_template: >-
        {{ ((states.sensor.energy_meter.attributes.pricePerUnit  | float ) * ( states.sensor.energy_mqtt_usage_month.state |float )) | round(2) }}
 
     energy_mqtt_usage_year:
+      unique_id: energy_mqtt_usage_year
       unit_of_measurement: 'kW'
       friendly_name: "Energy usage yearly"
       device_class: power
@@ -373,6 +426,7 @@
         {{ (aktualny - koniec_roku )|round(0) }}
 
     energy_mqtt_usage_year_pln:
+      unique_id: energy_mqtt_usage_year_pln
       unit_of_measurement: 'PLN'
       friendly_name: "Energy usage yearly in PLN"
       value_template: >-
@@ -384,35 +438,45 @@
 #===================================
 - platform: mqtt
   name: "energy_end_day_state"
+  unique_id: energy_end_day_state
   state_topic: "energy_meter/day/state"
   unit_of_measurement: "kWh"
   
 - platform: mqtt
   name: "energy_end_day_timestamp"
+  unique_id: energy_end_day_timestamp
   state_topic: "energy_meter/day/timestamp"
+
 - platform: mqtt
   name: "energy_usage_yesterday_mqtt"
+  unique_id: energy_usage_yesterday_mqtt
   state_topic: "energy_meter/yesterday/state"
   unit_of_measurement: "kWh"
 
 - platform: mqtt    
   name: "energy_end_month_state"
+  unique_id: energy_end_month_state
   state_topic: "energy_meter/month/state"
   unit_of_measurement: "kWh"
   
 - platform: mqtt
   name: "energy_end_month_timestamp"
+  unique_id: energy_end_month_timestamp
   state_topic: "energy_meter/month/timestamp"
+
 - platform: mqtt
   name: "energy_usage_previous_month_mqtt"
+  unique_id: energy_usage_previous_month_mqtt
   state_topic: "energy_meter/month/previous/state"
   unit_of_measurement: "kWh"      
     
 - platform: mqtt    
   name: "energy_end_year_state"
+  unique_id: energy_end_year_state
   state_topic: "energy_meter/year/state"
   unit_of_measurement: "kWh"
 
 - platform: mqtt
   name: "energy_end_year_timestamp"
+  unique_id: energy_end_year_timestamp
   state_topic: "energy_meter/year/timestamp"   
