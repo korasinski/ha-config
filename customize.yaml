@@ -10,6 +10,8 @@ light.h801_catlitter:
   friendly_name: Cat Litter
 light.h801_catfeeder:
   friendly_name: Cat Feeder
+switch.h801_airrefresher:
+  friendly_name: Air Refresher
 sensor.leclerc_on:
   icon: mdi:gas-station
 sensor.leclerc_pb95:

@@ -2,4 +2,5 @@ type: map
 entities:
   - person.kuba
   - person.klaudia
-hours_to_show: 72
+hours_to_show: 168
+default_zoom: 10

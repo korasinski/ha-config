@@ -7,11 +7,16 @@ style: >
     font-family: Roboto;
     font-weight: 400;
     font-size: 16px;
+    text-rendering: optimizeLegibility;
     text-align: left;
     position: static;
     margin-top: -25px;
     margin-bottom: 0px;
     margin-left: -10px;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
   }
 content: >
   Proxmox is running. All virtual machines are up. 

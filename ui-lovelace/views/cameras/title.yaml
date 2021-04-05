@@ -10,6 +10,10 @@ style: >
     line-height: 1em;
     text-rendering: optimizeLegibility;
     margin-left: -10px;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
   }
 
 content: |

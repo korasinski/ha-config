@@ -10,13 +10,17 @@ style: >
     line-height: 1em;
     text-rendering: optimizeLegibility;
     margin-left: -10px;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
   }
 
 content: |
   {% if now().hour in [5, 6, 7, 8]  -%}
   Good morning
   {% elif now().hour in [9, 10, 11, 12, 13]  -%}
-  Good day
+  Have a nice day
   {% elif now().hour in [14, 15, 16]  -%}
   Good afternoon
   {% elif now().hour in [17, 18, 19, 20]  -%}

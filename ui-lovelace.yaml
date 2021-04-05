@@ -14,14 +14,15 @@ button_card_templates: !include ui-lovelace/resources/button_card_templates.yaml
 
 title: My home
 views:
-  - !include ui-lovelace/views/index/index.yaml 
-  - !include ui-lovelace/views/lights/index.yaml  
+  - !include ui-lovelace/views/index/index.yaml
+  - !include ui-lovelace/views/lights/index.yaml
   - !include ui-lovelace/views/switches/index.yaml
+  - !include ui-lovelace/views/cats/index.yaml
   - !include ui-lovelace/views/heating/index.yaml
   - !include ui-lovelace/views/media/index.yaml
   - !include ui-lovelace/views/car/index.yaml
   - !include ui-lovelace/views/maps/index.yaml
   - !include ui-lovelace/views/cameras/index.yaml
   - !include ui-lovelace/views/mirror/index.yaml
-  - !include ui-lovelace/views/utility/index.yaml 
-  - !include ui-lovelace/views/server/index.yaml              
+  - !include ui-lovelace/views/utility/index.yaml
+  - !include ui-lovelace/views/server/index.yaml

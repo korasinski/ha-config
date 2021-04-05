@@ -1,0 +1,10 @@
+path: cats
+title: Cats
+panel: false
+icon: mdi:cat
+cards:
+  - type: vertical-stack
+    cards:
+      - !include title.yaml
+      - !include subtitle.yaml
+      - !include 1_row.yaml

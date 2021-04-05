@@ -93,3 +93,8 @@ switch_smart_mirror:
   template: ["switch"]
   custom_fields:
     icon: !include icons/smartmirror.yaml
+
+switch_fan:
+  template: ["switch"]
+  custom_fields:
+    icon: !include icons/fan.yaml

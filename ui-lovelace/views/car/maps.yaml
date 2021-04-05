@@ -1,5 +1,5 @@
 type: map
 entities:
   - device_tracker.iphone_bmw
-hours_to_show: 168
-default_zoom: 11
+hours_to_show: 268
+default_zoom: 6

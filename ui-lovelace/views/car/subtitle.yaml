@@ -13,6 +13,10 @@ style: >
     margin-top: -25px;
     margin-bottom: 0px;
     margin-left: -10px;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
   }
 content: >
 
@@ -21,3 +25,8 @@ content: >
   {% else %}
     Cars are outside the garage.
   {% endif %}
+  {% if is_state("sensor.iphone_bmw_battery_state", "Not Charging") -%}
+  Ignition is turned off.
+  {%- else -%} 
+  Ignition is turned on.
+  {%- endif %}

@@ -1,0 +1,20 @@
+type: horizontal-stack
+cards:
+  - type: custom:button-card
+    entity: switch.h801_airrefresher
+    template: switch_fan
+    hold_action:
+      action: more-info
+      entity: switch.h801_airrefresher
+  - type: custom:button-card
+    entity: light.h801_catlitter
+    template: light
+    hold_action:
+      action: more-info
+      entity: light.h801_catlitter
+  - type: custom:button-card
+    entity: light.h801_catfeeder
+    template: light
+    hold_action:
+      action: more-info
+      entity: light.h801_catfeeder

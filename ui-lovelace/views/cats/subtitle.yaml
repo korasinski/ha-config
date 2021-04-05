@@ -20,5 +20,10 @@ style: >
   }
 content: >
 
-  {% if is_state('binary_sensor.h801_doorlock', 'off') %}Doors are locked. {% else %} ⚠️ Doors are unlocked, please lock them! {% endif %} <br>
-  {% if is_state('person.kuba', 'home') and is_state('person.klaudia', 'home') %}Klaudia and Kuba are{% elif is_state('person.kuba', 'home') %} Kuba is{% elif is_state('person.klaudia', 'home') %} Klaudia is{% endif %} at home.
+  {% set birthdays = {
+    "aleks": "2021-02-06 00:00:00",
+    "maks": "2019-02-08 00:00:00"
+  } %}
+
+  Aleks: {{ ((as_timestamp(now())-as_timestamp(birthdays.aleks)) | int /60/1440/7) | round(0) }} weeks old.
+  Maks: {{ ((as_timestamp(now())-as_timestamp(birthdays.maks)) | int /60/1440/365) | round(0) }} years old.
