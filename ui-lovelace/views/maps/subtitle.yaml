@@ -20,4 +20,8 @@ style: >
   }
 content: >
 
-  Klaudia is at work and Kuba is at home.
+  {% if is_state('person.klaudia', 'home') and is_state('person.kuba', 'home') %}
+    Klaudia and Kuba are at home.
+  {% else %}
+    Klaudia is at {{ states('person.kuba') | lower() }} and Kuba is at {{ states('person.kuba') | lower() }}. 
+  {% endif %}
