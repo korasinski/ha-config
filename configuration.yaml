@@ -9,15 +9,20 @@ default_config:
 http:
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
+  ip_ban_enabled: true
+  login_attempts_threshold: 5
 
 homeassistant:
   customize: !include customize.yaml
+  external_url: !secret external_url
+  internal_url: !secret internal_url
 
 logger:
   default: warning
 
 # Configs
 automation: !include_dir_merge_list configs/automations
+camera: !include_dir_merge_list configs/cameras
 climate: !include_dir_merge_list configs/climates
 fan: !include_dir_merge_list configs/fans
 media_player: !include_dir_merge_list configs/media_players
