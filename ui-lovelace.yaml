@@ -24,5 +24,6 @@ views:
   - !include ui-lovelace/views/maps/index.yaml
   - !include ui-lovelace/views/cameras/index.yaml
   - !include ui-lovelace/views/mirror/index.yaml
-  - !include ui-lovelace/views/utility/index.yaml
-  - !include ui-lovelace/views/server/index.yaml
+  - !include ui-lovelace/views/utility/index.yaml                         
+  - !include ui-lovelace/views/server/index.yaml 
+  - !include ui-lovelace/views/other/index.yaml                                             

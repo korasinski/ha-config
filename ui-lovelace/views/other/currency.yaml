@@ -1,0 +1,50 @@
+type: horizontal-stack
+cards:
+  - type: custom:mini-graph-card
+    name: EUR
+    entities:
+      - sensor.nbp_eur
+    line_color: black
+    line_width: 8
+    font_size: 75
+    icon: mdi:currency-eur
+    update_interval: 30
+    animate: true
+    hours_to_show: 144
+    points_per_hour: 0.1
+    decimals: 4
+    show:
+      fill: fade
+      points: true
+  - type: custom:mini-graph-card
+    name: USD
+    entities:
+      - sensor.nbp_usd
+    line_color: black
+    line_width: 8
+    font_size: 75
+    icon: mdi:currency-usd
+    update_interval: 30
+    animate: true
+    hours_to_show: 144
+    points_per_hour: 0.1
+    decimals: 4
+    show:
+      fill: fade
+      points: true
+  - type: custom:mini-graph-card
+    name: GBP
+    entities:
+      - sensor.nbp_gbp
+    line_color: black
+    line_width: 8
+    font_size: 75
+    icon: mdi:currency-gbp
+    update_interval: 30
+    animate: true
+    hours_to_show: 144
+    points_per_hour: 0.1
+    decimals: 4
+    show:
+      fill: fade
+      points: true

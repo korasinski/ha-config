@@ -1,0 +1,10 @@
+path: other
+title: Other
+panel: false
+icon: mdi:checkbox-blank-off-outline
+cards:
+  - type: vertical-stack
+    cards:
+      - !include currency.yaml
+      - !include covid.yaml
+      

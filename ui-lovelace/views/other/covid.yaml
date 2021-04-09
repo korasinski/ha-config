@@ -1,0 +1,37 @@
+type: custom:mini-graph-card
+name: COVID-19
+entities:
+  - entity: sensor.poland_coronavirus_confirmed
+    name: Confirmed
+    show_state: true
+    show_graph: false
+    unit: confirmed cases
+  - entity: sensor.poland_coronavirus_current
+    name: Current
+    color: black
+    show_state: true
+    unit: current cases
+  - entity: sensor.poland_coronavirus_deaths
+    name: Deaths
+    show_graph: false
+    show_state: true
+    unit: deaths cases
+  - entity: sensor.poland_coronavirus_recovered
+    name: Recovered
+    show_graph: false
+    show_state: true
+    unit: recovered cases
+line_width: 3
+animate: true
+hours_to_show: 178
+points_per_hour: 0.001
+hour24: true
+points: false
+group_by: hour
+font_size: 75
+smoothing: true
+show:
+  fill: fade
+  labels: true
+  legend: false
+  points: false
