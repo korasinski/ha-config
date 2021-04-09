@@ -10,6 +10,8 @@
 esphome
 **/__py
 www/community/
+node-red
+custom_components/
 
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
 ip_bans.yaml
@@ -23,10 +25,7 @@ home-assistant.log
 .gitignore
 
 # Not used files
-ui-lovelace/views/_not_used/covid.yaml
-ui-lovelace/views/_not_used/currency.yaml
-ui-lovelace/views/_not_used/energy_summary.yaml
-ui-lovelace/views/_not_used/old.yaml
+ui-lovelace/views/other/old.yaml
 
 # Not include gz files in www
 www/**/*.gz
