@@ -1,0 +1,4 @@
+  - platform: generic
+    name: Indoor
+    still_image_url: !secret camera_indoor_url
+    verify_ssl: false

@@ -1,0 +1,39 @@
+type: picture-elements
+image: /local/images/camera_off.png
+elements:
+  - type: conditional
+    conditions:
+      - entity: switch.camera_indoor
+        state: "on"
+    elements:
+      - type: image
+        entity: camera.indoor
+        camera_image: camera.indoor
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+  - type: state-label
+    entity: switch.camera_indoor
+    attribute: friendly_name
+    tap_action:
+      action: none
+    style:
+        top: 90%
+        left: 10%
+        text-align: left
+        font-size: 16px
+        background-color: rgba(0, 0, 0, 0.3)
+        font-weight: 500
+        color: white
+        padding-left: 100%
+        padding-right: 100%
+        line-height: 40px
+  - type: state-icon
+    title: Indoor
+    tap_action:
+      action: toggle
+    entity: switch.camera_indoor
+    style:
+      left: 95%
+      top: 90%

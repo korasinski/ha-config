@@ -8,5 +8,5 @@ cards:
       - !include title.yaml
       - !include subtitle.yaml
       - !include doorway.yaml
-      - !include hallway.yaml
+      - !include indoor.yaml
       

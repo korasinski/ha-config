@@ -1,5 +1,68 @@
-title: "Doorway"
+type: picture-elements
+image: /local/images/camera_off.png
 camera_image: 'camera.door'
-aspect_ratio: 16:9
-entities: []
-type: picture-glance
+style: |
+  @keyframes fade {
+    0% {opacity: 0.2} 
+    50% {opacity: 1}
+    100% {opacity:0.2}
+  }
+elements:
+  - type: image
+    entity: camera.door
+    camera_image: camera.door
+    style:
+      left: 50%
+      top: 50%
+      width: 100%
+  - type: state-label
+    entity: camera.door
+    attribute: friendly_name
+    tap_action:
+      action: none
+    style:
+        top: 90%
+        left: 10%
+        text-align: left
+        font-size: 16px
+        background-color: rgba(0, 0, 0, 0.3)
+        font-weight: 500
+        color: white
+        padding-left: 100%
+        padding-right: 100%
+        line-height: 40px
+  - type: state-icon
+    tap_action:
+      action: none
+    entity: switch.door_detect
+    style:
+      left: 55%
+      top: 90%
+      animation: fade 5s linear infinite
+  - type: state-icon
+    tap_action:
+      action: none
+    entity: switch.door_snapshots
+    style:
+      left: 65%
+      top: 90%
+  - type: state-icon
+    tap_action:
+      action: none
+    entity: switch.door_clips
+    style:
+      left: 75%
+      top: 90%
+  - type: state-label
+    entity: camera.door
+    attribute: event_name
+    tap_action:
+      action: navigate
+      navigation_path: /ccab4aaf_frigate/dashboard/
+    style:
+      top: 90%
+      left: 90%
+      color: black
+      background-color: rgba(255, 255, 255, 0.9)
+      border: solid 1px #ffffff
+      border-radius: 10px

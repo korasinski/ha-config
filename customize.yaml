@@ -26,3 +26,8 @@ sensor.nbp_gbp:
   icon: mdi:currency-gbp
 sensor.nbp_usd:
   icon: mdi:currency-usd
+switch.camera_indoor:
+  friendly_name: Indoor
+  icon: mdi:power
+camera.door:
+  event_name: Events

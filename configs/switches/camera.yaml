@@ -1,0 +1,7 @@
+- platform: command_line
+  switches:
+    camera_indoor:
+      command_on: !secret camera_indoor_on
+      command_off: !secret camera_indoor_off
+      command_state: !secret camera_indoor_status
+      value_template: '{{ value_json.SWITCH_ON == "yes" }}'
