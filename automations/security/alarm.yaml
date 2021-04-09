@@ -8,9 +8,9 @@
     condition: and
     conditions:
     - condition: template
-      value_template: '{{ states(''device_tracker.iphone_kuba'') != ''home'' }}'
+      value_template: "{{ states('person.kuba') != 'home' }}"
     - condition: template
-      value_template: '{{ states(''device_tracker.iphone_klaudia'') != ''home'' }}'
+      value_template: "{{ states('person.klaudia') != 'home' }}"
   action:
     service: notify.mobile_app_iphone_kuba
     data:

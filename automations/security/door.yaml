@@ -8,7 +8,7 @@
       for: "00:30:00"
   condition:
     - condition: template
-      value_template: '{{ states(''person.kuba'') == ''home'' }}'
+      value_template: "{{ states('person.kuba') == 'home' }}"
   action:
     - service: notify.mobile_app_iphone_kuba
       data:
@@ -35,7 +35,7 @@
     to: 'off'
   condition:
     - condition: template
-      value_template: '{{ states(''person.kuba'') == ''home'' }}'
+      value_template: "{{ states('person.kuba') == 'home' }}"
   action:
     service: notify.mobile_app_iphone_kuba
     data:
@@ -59,7 +59,7 @@
     for: "00:30:00"
   condition:
     - condition: template
-      value_template: '{{ states(''person.klaudia'') == ''home'' }}'
+      value_template: "{{ states('person.klaudia') == 'home' }}"
   action:
     - service: notify.mobile_app_iphone_klaudia
       data:
@@ -86,7 +86,7 @@
     to: 'off'
   condition:
     - condition: template
-      value_template: '{{ states(''person.klaudia'') == ''home'' }}'
+      value_template: "{{ states('person.klaudia') == 'home' }}"
   action:
     service: notify.mobile_app_iphone_klaudia
     data:

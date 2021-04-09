@@ -1,0 +1,21 @@
+- id: camera_indoor
+  alias: Security - camera indoor
+  trigger:
+  - platform: state
+    entity_id:
+      - person.kuba
+      - person.klaudia
+
+  action:
+    service: >
+      {% if ((states('person.kuba') in ('home')) or (states('person.klaudia') in ('home'))) %}
+        switch.turn_off
+      {% elif ((states('person.kuba') in ('not_home','work', 'work_2')) and (states('person.klaudia') in ('not_home','work', 'work_2'))) %}
+        switch.turn_on
+      {% else %}
+        switch.turn_off
+      {% endif %}
+    entity_id: switch.camera_indoor
+
+  mode: single
+  max_exceeded: silent
