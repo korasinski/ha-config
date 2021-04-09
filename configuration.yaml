@@ -21,7 +21,7 @@ logger:
   default: warning
 
 # Configs
-automation: !include_dir_merge_list configs/automations
+automation: !include_dir_merge_list automations
 camera: !include_dir_merge_list configs/cameras
 climate: !include_dir_merge_list configs/climates
 fan: !include_dir_merge_list configs/fans
