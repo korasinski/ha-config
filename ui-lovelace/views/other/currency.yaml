@@ -3,11 +3,10 @@ cards:
   - type: custom:mini-graph-card
     name: EUR
     entities:
-      - sensor.nbp_eur
+      - sensor.eur_to_pln
     line_color: black
     line_width: 8
     font_size: 75
-    icon: mdi:currency-eur
     update_interval: 30
     animate: true
     hours_to_show: 144
@@ -19,11 +18,10 @@ cards:
   - type: custom:mini-graph-card
     name: USD
     entities:
-      - sensor.nbp_usd
+      - sensor.usd_to_pln
     line_color: black
     line_width: 8
     font_size: 75
-    icon: mdi:currency-usd
     update_interval: 30
     animate: true
     hours_to_show: 144
@@ -35,11 +33,10 @@ cards:
   - type: custom:mini-graph-card
     name: GBP
     entities:
-      - sensor.nbp_gbp
+      - sensor.gbp_to_pln
     line_color: black
     line_width: 8
     font_size: 75
-    icon: mdi:currency-gbp
     update_interval: 30
     animate: true
     hours_to_show: 144
