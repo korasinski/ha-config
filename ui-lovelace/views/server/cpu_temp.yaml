@@ -1,14 +1,14 @@
 type: custom:mini-graph-card
 entities:
-  - entity: sensor.cpu_temperature
+  - entity: sensor.proxmox_cpu_temperature
     name: CPU Temperature
     show_graph: false
-  - entity: sensor.cpu_core_1_temperature
+  - entity: sensor.proxmox_cpu_core1_temperature
     name: Core 1
     unit: °C on Core 1
     show_state: true
     show_graph: true
-  - entity: sensor.cpu_core_2_temperature
+  - entity: sensor.proxmox_cpu_core2_temperature
     name: Core 2
     unit: °C on Core 2
     show_state: true

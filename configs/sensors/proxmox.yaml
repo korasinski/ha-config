@@ -1,31 +1,52 @@
-- platform: mqtt
-  unique_id: cpu
-  state_topic: "server/proxmox/cpu_temp"
-  device_class: temperature
-  name: CPU Temperature
-  unit_of_measurement: "°C"
-- platform: mqtt
-  unique_id: cpu_core1
-  state_topic: "server/proxmox/cpu_core1_temp"
-  device_class: temperature
-  name: CPU Core 1 Temperature
-  unit_of_measurement: "°C"
-- platform: mqtt
-  unique_id: cpu_core2
-  state_topic: "server/proxmox/cpu_core2_temp"
-  device_class: temperature
-  name: CPU Core 2 Temperature
-  unit_of_measurement: "°C"
-- platform: mqtt
-  unique_id: acpi_1
-  state_topic: "server/proxmox/acpi_temp1"
-  device_class: temperature
-  name: ACPI 1 Temperature
-  unit_of_measurement: "°C"
-  qos: 1
-- platform: mqtt
-  unique_id: acpi_2
-  state_topic: "server/proxmox/acpi_temp2"
-  device_class: temperature
-  name: ACPI 2 Temperature
-  unit_of_measurement: "°C"
+- platform: rest
+  name: Proxmox
+  json_attributes:
+    - uptime
+    - cpu_temp
+    - cpu_core1_temp
+    - cpu_core2_temp
+    - acpi_temp1
+    - acpi_temp2
+    - disk_usage
+    - homeassistant_vm
+  resource: !secret proxmox_data
+  value_template: '{{ value_json.status }}'
+  scan_interval: 30
+
+- platform: template
+  sensors:
+    proxmox_cpu_temperature:
+      unique_id: proxmox_cpu_temperature
+      value_template: '{{ state_attr("sensor.proxmox", "cpu_temp") | float }}'
+      device_class: temperature
+      unit_of_measurement: "°C"
+      friendly_name: Proxmox CPU Temperature
+    proxmox_cpu_core1_temperature:
+      unique_id: proxmox_cpu_core1_temperature
+      value_template: '{{ state_attr("sensor.proxmox", "cpu_core1_temp") | float }}'
+      device_class: temperature
+      unit_of_measurement: "°C"
+      friendly_name: Proxmox CPU Core 1 Temperature
+    proxmox_cpu_core2_temperature:
+      unique_id: proxmox_cpu_core2_temperature
+      value_template: '{{ state_attr("sensor.proxmox", "cpu_core2_temp") | float }}'
+      device_class: temperature
+      unit_of_measurement: "°C"
+      friendly_name: Proxmox CPU Core 2 Temperature
+    proxmox_acpi_temp1:
+      unique_id: proxmox_acpi_temp1
+      value_template: '{{ state_attr("sensor.proxmox", "acpi_temp1") | float }}'
+      device_class: temperature
+      unit_of_measurement: "°C"
+      friendly_name: Proxmox ACPI1 Temperature 
+    proxmox_acpi_temp2:
+      unique_id: proxmox_acpi_temp2
+      value_template: '{{ state_attr("sensor.proxmox", "acpi_temp2") | float }}'
+      device_class: temperature
+      unit_of_measurement: "°C"
+      friendly_name: Proxmox ACPI2 Temperature 
+    proxmox_disk_usage:
+      unique_id: proxmox_disk_usage
+      value_template: '{{ state_attr("sensor.proxmox", "disk_usage") | float }}'
+      unit_of_measurement: "%"
+      friendly_name: Proxmox Disk Usage

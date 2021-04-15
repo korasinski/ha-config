@@ -9,6 +9,10 @@ entities:
   - entity: sensor.disk_use
     show_state: true
     show_graph: false
+  - entity: sensor.proxmox_disk_usage
+    show_state: true
+    show_graph: false
+    unit: "% free on Proxmox"
 line_width: 2
 animate: true
 hours_to_show: 24

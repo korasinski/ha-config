@@ -19,4 +19,6 @@ style: >
     transition: none !important;
   }
 content: >
-  Proxmox is running. All virtual machines are up. 
+  Proxmox is running since {{ state_attr("sensor.proxmox", "uptime") }}. 
+  
+  Home Assistant VM is {{ state_attr("sensor.proxmox", "homeassistant_vm") }}.
