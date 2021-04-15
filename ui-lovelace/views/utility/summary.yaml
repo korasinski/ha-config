@@ -25,5 +25,5 @@ entities:
     name: Counter state
     secondary_info: >
       [[ sensor.energy_meter.attributes.pricePerUnit ]]zł/kWh | TTL:
-      [[ sensor.energy_meter ]]zł
+      [[ sensor.energy_meter.attributes.totalCost ]]zł
     type: 'custom:secondaryinfo-entity-row'

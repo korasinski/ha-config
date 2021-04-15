@@ -1,15 +1,3 @@
-- platform: rest
-  name: Energy Meter
-  resource: !secret supla_resource
-  value_template: '{{ value_json.totalCost }}'
-  json_attributes:
-    - phases
-    - connected
-    - currency
-    - pricePerUnit
-    - support
-  unit_of_measurement: 'PLN'
-  
 - platform: template
   sensors:
     #Frequency

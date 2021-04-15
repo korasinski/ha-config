@@ -1,0 +1,3 @@
+servers:
+  - server: !secret supla_server
+    access_token: !secret supla_access_token
